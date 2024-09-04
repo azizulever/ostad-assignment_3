@@ -156,11 +156,11 @@ class Home extends StatelessWidget {
               ),
               const SizedBox(height: 100),
               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         'FLUTTER WEB.\nTHE BASICS',
@@ -169,6 +169,7 @@ class Home extends StatelessWidget {
                           fontWeight: FontWeight.w900,
                           height: 1,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 30),
                       Text(
@@ -179,29 +180,32 @@ class Home extends StatelessWidget {
                           fontSize: 18,
                           height: 1.5,
                         ),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 120),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFF00D084), // Green color
+                          foregroundColor: Colors.white, // Text color
+                          padding: EdgeInsets.symmetric(horizontal: 60, vertical: 19),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8), // Rounded corners
+                          ),
+                        ),
+                        onPressed: () {
+                          // Define the action when the button is pressed
+                        },
+                        child: Text(
+                          'Join course',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                     ],
                   ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF00D084), // Green color
-                      foregroundColor: Colors.white, // Text color
-                      padding: EdgeInsets.symmetric(horizontal: 70, vertical: 19),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8), // Rounded corners
-                      ),
-                    ),
-                    onPressed: () {
-                      // Define the action when the button is pressed
-                    },
-                    child: Text(
-                      'Join course',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
+
                 ],
               ),
             ],
